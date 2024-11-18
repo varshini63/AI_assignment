@@ -1,9 +1,9 @@
 AI Agent Dashboard
 
-Overview
+Overview:
 The AI Agent Dashboard is a Flask-based web application that allows users to upload a CSV file, select a column of interest, and run queries like average, max, min, mode, median, variance, and standard deviation to analyze the data dynamically.
 
-Features
+Features:
 Upload CSV Files: Upload data for processing and preview the top rows directly in the application.
 Column Selection: Dynamically select a primary column for analysis.
 Query Execution: Execute statistical queries such as average, maximum, minimum, mode, median, variance, and standard deviation.
