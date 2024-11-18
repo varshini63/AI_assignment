@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Agent Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Agent Dashboard</h1>
+        
+        <!-- File Upload Form -->
+        <form id="fileUploadForm" enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="file" accept=".csv" required>
+            <button type="submit">Upload CSV</button>
+        </form>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="hidden">Loading...</div>
+
+        <!-- Data Preview and Column Selection -->
+        <div id="preview"></div>
+        <div id="columnSelection">
+            <br><br>
+            <label for="columnSelect">Select the primary column:</label>
+            <select id="columnSelect" name="column"></select>
+        </div>
+
+        <!-- Query Form -->
+        <form id="queryForm">
+            <input type="text" id="promptInput" placeholder="Enter Query: Try 'average', 'max', 'min', 'mode', 'median', 'variance', or 'standard deviation'.">
+            <button type="button" onclick="submitQuery()">Submit Query</button>
+        </form>
+
+        <!-- Results Display -->
+        <div id="resultContainer"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
